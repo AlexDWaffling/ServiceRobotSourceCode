@@ -25,11 +25,11 @@
 #include <sensor_msgs/Imu.h>
 #include <sensor_msgs/MagneticField.h>
 
-#if defined NOETIC_SUPPORT
-  #include <sensor_msgs/BatteryStateNoetic.h>
-#else
-  #include <sensor_msgs/BatteryState.h>
-#endif
+// #if defined NOETIC_SUPPORT
+//   #include <sensor_msgs/BatteryStateNoetic.h>
+// #else
+//   #include <sensor_msgs/BatteryState.h>
+// #endif
 
 #include "OLLO.h"
 
@@ -140,11 +140,11 @@ class AGVSensor
   //void setLedPattern(double linear_vel, double angular_vel);
  private:
   sensor_msgs::Imu           imu_msg_;
-  #if defined NOETIC_SUPPORT
-    sensor_msgs::BatteryStateNoetic  battery_state_msg_;
-  #else
-    sensor_msgs::BatteryState  battery_state_msg_;
-  #endif
+  // #if defined NOETIC_SUPPORT
+  //   sensor_msgs::BatteryStateNoetic  battery_state_msg_;
+  // #else
+  //   sensor_msgs::BatteryState  battery_state_msg_;
+  // #endif
   sensor_msgs::MagneticField mag_msg_;
 
   cIMU imu_;
